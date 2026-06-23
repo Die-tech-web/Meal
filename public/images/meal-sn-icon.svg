@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A5C8E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0E8C6A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F4A800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0A5C8E" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="roundedClip">
+      <rect x="0" y="0" width="120" height="120" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="120" height="120" rx="24" fill="url(#iconBg)" filter="url(#shadow)"/>
+
+  <!-- Grid lines subtle -->
+  <g clip-path="url(#roundedClip)" opacity="0.07">
+    <line x1="20" y1="0" x2="20" y2="120" stroke="white" stroke-width="1"/>
+    <line x1="40" y1="0" x2="40" y2="120" stroke="white" stroke-width="1"/>
+    <line x1="60" y1="0" x2="60" y2="120" stroke="white" stroke-width="1"/>
+    <line x1="80" y1="0" x2="80" y2="120" stroke="white" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="120" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="20" x2="120" y2="20" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="40" x2="120" y2="40" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="60" x2="120" y2="60" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="80" x2="120" y2="80" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="100" x2="120" y2="100" stroke="white" stroke-width="1"/>
+  </g>
+
+  <!-- Background trend line (white ghost) -->
+  <polyline
+    points="14,96 30,78 46,85 62,63 78,70 96,46 112,30"
+    fill="none"
+    stroke="white"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.2"
+    clip-path="url(#roundedClip)"
+  />
+
+  <!-- Main data line -->
+  <polyline
+    points="14,100 30,82 46,88 62,66 78,73 96,49 112,30"
+    fill="none"
+    stroke="#F4A800"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    clip-path="url(#roundedClip)"
+  />
+
+  <!-- Data points -->
+  <circle cx="14" cy="100" r="4.5" fill="#F4A800"/>
+  <circle cx="30" cy="82" r="4.5" fill="#F4A800"/>
+  <circle cx="46" cy="88" r="4" fill="white" opacity="0.7"/>
+  <circle cx="62" cy="66" r="4.5" fill="#F4A800"/>
+  <circle cx="78" cy="73" r="4" fill="white" opacity="0.7"/>
+  <circle cx="96" cy="49" r="6" fill="white" stroke="#F4A800" stroke-width="2.5"/>
+  <circle cx="112" cy="30" r="6.5" fill="white" stroke="#F4A800" stroke-width="3"/>
+
+  <!-- Progress bar bottom -->
+  <rect x="14" y="110" width="92" height="5" rx="2.5" fill="white" opacity="0.15"/>
+  <rect x="14" y="110" width="65" height="5" rx="2.5" fill="url(#accentGrad)"/>
+
+  <!-- Status dots top-left -->
+  <circle cx="20" cy="20" r="5" fill="#F4A800" opacity="0.95"/>
+  <circle cx="36" cy="20" r="5" fill="white" opacity="0.45"/>
+  <circle cx="52" cy="20" r="5" fill="white" opacity="0.2"/>
+
+  <!-- "M" letter subtle watermark -->
+  <text
+    x="60"
+    y="60"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="52"
+    font-weight="900"
+    fill="white"
+    opacity="0.05"
+    dominant-baseline="middle"
+  >M</text>
+
+</svg>

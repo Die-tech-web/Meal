@@ -1,0 +1,60 @@
+{
+  "messages": [
+    {
+      "id": "d793",
+      "firstName": "Maman",
+      "lastName": "Niang",
+      "email": "dieniang32@gmail.com",
+      "organization": "dev",
+      "subject": "test",
+      "message": "test 1",
+      "createdAt": "2026-03-09T23:45:10.145Z",
+      "status": "non_lu"
+    },
+    {
+      "id": "daea",
+      "firstName": "Maman",
+      "lastName": "Niang",
+      "email": "dieniang32@gmail.com",
+      "organization": "java",
+      "subject": "demande ",
+      "message": "service meal",
+      "createdAt": "2026-03-09T23:55:25.814Z",
+      "status": "non_lu"
+    },
+    {
+      "id": "a73b",
+      "firstName": "Maman",
+      "lastName": "Niang",
+      "email": "dieniang32@gmail.com",
+      "organization": "ORANGE SENEGAL",
+      "subject": "TESTTTT",
+      "message": "TESTTTT",
+      "createdAt": "2026-03-10T00:10:57.501Z",
+      "status": "non_lu"
+    },
+    {
+      "id": "6e03",
+      "firstName": "Dié",
+      "lastName": "Niang",
+      "email": "dieniang32@gmail.com",
+      "organization": "FREE SEBEGAL",
+      "subject": "TIGO",
+      "message": "TEST",
+      "createdAt": "2026-03-10T00:15:06.932Z",
+      "status": "non_lu"
+    },
+    {
+      "id": "75ac",
+      "firstName": "Maman",
+      "lastName": "Niang",
+      "email": "dieniang32@gmail.com",
+      "organization": "AYOS SOLUTIONS",
+      "subject": "demande ",
+      "message": "HOTELLERIE",
+      "createdAt": "2026-03-10T00:45:38.243Z",
+      "status": "non_lu"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

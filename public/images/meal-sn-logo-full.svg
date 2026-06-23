@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 160" width="460" height="160">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A5C8E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0E8C6A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F4A800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F97316;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A5C8E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0E8C6A;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0A5C8E" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- ===== ICON MARK ===== -->
+  <rect x="8" y="8" width="130" height="130" rx="22" fill="url(#iconBg)" filter="url(#shadow)"/>
+
+  <g opacity="0.08">
+    <line x1="30" y1="8" x2="30" y2="138" stroke="white" stroke-width="0.8"/>
+    <line x1="53" y1="8" x2="53" y2="138" stroke="white" stroke-width="0.8"/>
+    <line x1="76" y1="8" x2="76" y2="138" stroke="white" stroke-width="0.8"/>
+    <line x1="99" y1="8" x2="99" y2="138" stroke="white" stroke-width="0.8"/>
+    <line x1="122" y1="8" x2="122" y2="138" stroke="white" stroke-width="0.8"/>
+    <line x1="8" y1="33" x2="138" y2="33" stroke="white" stroke-width="0.8"/>
+    <line x1="8" y1="56" x2="138" y2="56" stroke="white" stroke-width="0.8"/>
+    <line x1="8" y1="79" x2="138" y2="79" stroke="white" stroke-width="0.8"/>
+    <line x1="8" y1="102" x2="138" y2="102" stroke="white" stroke-width="0.8"/>
+    <line x1="8" y1="125" x2="138" y2="125" stroke="white" stroke-width="0.8"/>
+  </g>
+
+  <polyline points="22,108 38,88 52,96 66,72 80,80 94,55 108,62 122,38"
+    fill="none" stroke="white" stroke-width="3"
+    stroke-linecap="round" stroke-linejoin="round" opacity="0.2"/>
+
+  <polyline points="22,115 40,95 56,100 70,78 84,84 100,58 116,65 130,40"
+    fill="none" stroke="#F4A800" stroke-width="3.5"
+    stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="22" cy="115" r="4" fill="#F4A800"/>
+  <circle cx="40" cy="95" r="4" fill="#F4A800"/>
+  <circle cx="56" cy="100" r="4" fill="white"/>
+  <circle cx="70" cy="78" r="4" fill="#F4A800"/>
+  <circle cx="84" cy="84" r="4" fill="white"/>
+  <circle cx="100" cy="58" r="5.5" fill="white" stroke="#F4A800" stroke-width="2"/>
+  <circle cx="116" cy="65" r="4" fill="#F4A800"/>
+  <circle cx="130" cy="40" r="5.5" fill="white" stroke="#F4A800" stroke-width="2.5"/>
+
+  <rect x="22" y="128" width="102" height="5" rx="2.5" fill="white" opacity="0.2"/>
+  <rect x="22" y="128" width="72" height="5" rx="2.5" fill="url(#accentGrad)"/>
+
+  <circle cx="26" cy="26" r="5" fill="#F4A800" opacity="0.9"/>
+  <circle cx="44" cy="26" r="5" fill="white" opacity="0.5"/>
+  <circle cx="62" cy="26" r="5" fill="white" opacity="0.25"/>
+
+  <!-- ===== TEXTE LOGO ===== -->
+
+  <!-- Ligne décorative verticale -->
+  <rect x="162" y="22" width="3" height="114" rx="1.5" fill="url(#accentGrad)"/>
+
+  <!-- Tagline facultative au-dessus de MEAL -->
+  <text
+    x="175"
+    y="42"
+    font-family="'Trebuchet MS', 'Lucida Sans', sans-serif"
+    font-size="10.5"
+    font-weight="300"
+    letter-spacing="4.5"
+    fill="#0E8C6A"
+    opacity="0.60"
+  >DONNÉES · IMPACT · RÉSULTATS</text>
+
+  <!-- Séparateur fin sous le tagline -->
+  <rect x="175" y="50" width="200" height="1" rx="0.5" fill="#0E8C6A" opacity="0.2"/>
+
+  <!-- MEAL en grand -->
+  <text
+    x="172"
+    y="114"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="80"
+    font-weight="700"
+    letter-spacing="-2"
+    fill="url(#primaryGrad)"
+    filter="url(#shadow)"
+  >MEAL</text>
+
+  <!-- Barre accent sous MEAL -->
+  <rect x="175" y="120" width="252" height="4" rx="2" fill="url(#accentGrad)"/>
+
+  <!-- Sous-titre acronyme -->
+  <text
+    x="175"
+    y="140"
+    font-family="'Trebuchet MS', 'Lucida Sans', sans-serif"
+    font-size="10"
+    font-weight="400"
+    letter-spacing="1.8"
+    fill="#0A5C8E"
+    opacity="0.65"
+  >MONITORING · EVALUATION · ACCOUNTABILITY · LEARNING</text>
+
+</svg>
