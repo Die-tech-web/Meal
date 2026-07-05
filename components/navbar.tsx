@@ -60,9 +60,9 @@ export function Navbar() {
         {/* Logo */}
         <Link href="#message">
           <Image
-            src="/images/meal-sn-logo-full.svg"
+            src="/images/new-logo.png"
             alt="MEAL.sn"
-            width={140}
+            width={154}
             height={40}
             className="h-10 w-auto"
           />

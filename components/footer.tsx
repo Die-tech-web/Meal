@@ -34,9 +34,9 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="#accueil">
               <Image
-                src="/images/meal-sn-logo-full.svg"
+                src="/images/new-logo.png"
                 alt="MEAL.sn"
-                width={140}
+                width={154}
                 height={40}
                 className="h-10 w-auto"
               />
