@@ -128,7 +128,16 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-secondary-foreground/10 pt-8 md:flex-row">
           <p className="text-xs text-secondary-foreground/40">
-            {currentYear} MEAL.sn. Tous droits reserves.
+            {currentYear}{" "}
+            <a
+              href="https://www.cabinet-meal.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-primary"
+            >
+              https://www.cabinet-meal.com/
+            </a>{" "}
+            Tous droits reserves.
           </p>
           <div className="flex items-center gap-6">
             <Link
