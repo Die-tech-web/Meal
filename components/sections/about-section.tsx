@@ -19,12 +19,12 @@ const VALUES = [
 ]
 
 const EXPERTISE_DOMAINS = [
-  { sector: "Santé & Nutrition", count: "45+", color: "bg-rose-500/10 text-rose-600 border-rose-200" },
-  { sector: "Éducation & Formation", count: "38+", color: "bg-blue-500/10 text-blue-600 border-blue-200" },
-  { sector: "Agriculture & Environnement", count: "32+", color: "bg-emerald-500/10 text-emerald-600 border-emerald-200" },
-  { sector: "Gouvernance & Droits", count: "28+", color: "bg-violet-500/10 text-violet-600 border-violet-200" },
-  { sector: "Genre & Protection", count: "22+", color: "bg-orange-500/10 text-orange-600 border-orange-200" },
-  { sector: "Urgence & Résilience", count: "18+", color: "bg-primary/10 text-primary border-primary/20" },
+  { sector: "Santé & Nutrition", color: "bg-rose-500/10 text-rose-600 border-rose-200" },
+  { sector: "Éducation & Formation", color: "bg-blue-500/10 text-blue-600 border-blue-200" },
+  { sector: "Agriculture & Environnement", color: "bg-emerald-500/10 text-emerald-600 border-emerald-200" },
+  { sector: "Gouvernance & Droits", color: "bg-violet-500/10 text-violet-600 border-violet-200" },
+  { sector: "Genre & Protection", color: "bg-orange-500/10 text-orange-600 border-orange-200" },
+  { sector: "Urgence & Résilience", color: "bg-primary/10 text-primary border-primary/20" },
 ]
 
 const MEAL_PILLARS = [
@@ -203,7 +203,6 @@ export function AboutSection() {
                   {EXPERTISE_DOMAINS.map((d, i) => (
                     <div key={i} className={`flex items-center justify-between rounded-xl border px-5 py-4 ${d.color}`}>
                       <span className="font-medium text-sm">{d.sector}</span>
-                      <span className="text-xl font-bold">{d.count}</span>
                     </div>
                   ))}
                 </div>
