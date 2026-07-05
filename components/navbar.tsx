@@ -24,7 +24,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isAccueilOpen, setIsAccueilOpen] = useState(false)
   const [isMobileAccueilOpen, setIsMobileAccueilOpen] = useState(false)
-  const dropdownRef = useRef<HTMLDivElement>(null)
+  const dropdownRef = useRef<HTMLLIElement>(null)
 
   useEffect(() => {
     function handleScroll() {
@@ -61,7 +61,7 @@ export function Navbar() {
         <Link href="#message">
           <Image
             src="/images/new-logo.png"
-            alt="MEAL.sn"
+            alt="Cabinet MEAL"
             width={154}
             height={40}
             className="h-10 w-auto"

@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
         <!-- Pied de page -->
         <div style="background: #f1f5f9; padding: 16px 32px; border-top: 1px solid #e2e8f0;">
           <p style="margin: 0; font-size: 12px; color: #94a3b8; text-align: center;">
-            Message reçu le <strong>${dateStr}</strong> à <strong>${timeStr}</strong> — MEAL.sn · Dakar, Sénégal
+            Message reçu le <strong>${dateStr}</strong> à <strong>${timeStr}</strong> — Cabinet MEAL · Dakar, Sénégal
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export async function POST(request: NextRequest) {
       },
     }).sendMail({
       from: `"MEAL - Formulaire de contact" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_EMAIL_TO || "mansour.niang@uadb.edu.sn",
+      to: process.env.CONTACT_EMAIL_TO || "cabinet.meal@gmail.com",
       replyTo: email,
       subject: `[MEAL Contact] ${subject}`,
       html: htmlBody,

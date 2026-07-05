@@ -26,10 +26,49 @@ export function ReservationSection() {
   const [selectedFormation, setSelectedFormation] = useState<string | null>(null)
   const [formData, setFormData] = useState({ nom: "", email: "", organisation: "", telephone: "", message: "", format: "presentiel" })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    setIsSubmitting(true)
+    setError(null)
+
+    const [firstName, ...lastNameParts] = formData.nom.trim().split(/\s+/)
+    const formation = FORMATIONS.find((item) => item.id === selectedFormation)
+    const details = [
+      `Type de demande : ${activeTab}`,
+      formation ? `Formation : ${formation.label}` : null,
+      activeTab === "Formations" ? `Format souhaité : ${formData.format}` : null,
+      formData.telephone ? `Téléphone : ${formData.telephone}` : null,
+      formData.message ? `Message :\n${formData.message}` : null,
+    ].filter(Boolean).join("\n\n")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstName,
+          lastName: lastNameParts.join(" ") || "Non renseigné",
+          email: formData.email,
+          organization: formData.organisation,
+          subject: `Demande de service - ${activeTab}`,
+          message: details,
+        }),
+      })
+
+      if (!response.ok) {
+        const result = await response.json()
+        throw new Error(result.error || "Une erreur est survenue.")
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Une erreur est survenue. Veuillez réessayer.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -256,8 +295,15 @@ export function ReservationSection() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 font-semibold">
-                  Envoyer la demande <ChevronRight className="ml-1 h-4 w-4" />
+                {error && (
+                  <p className="text-sm text-destructive" role="alert">
+                    {error}
+                  </p>
+                )}
+
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 font-semibold">
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer la demande"}
+                  {!isSubmitting && <ChevronRight className="ml-1 h-4 w-4" />}
                 </Button>
 
                 <p className="text-center text-xs text-muted-foreground">

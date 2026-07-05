@@ -12,14 +12,14 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@meal.sn",
-    href: "mailto:contact@meal.sn",
+    value: "cabinet.meal@gmail.com",
+    href: "mailto:cabinet.meal@gmail.com",
   },
   {
     icon: Phone,
     label: "Telephone",
-    value: "+221 33 XXX XX XX",
-    href: "tel:+221330000000",
+    value: "+221 77 840 98 32",
+    href: "tel:+221778409832",
   },
   {
     icon: MapPin,

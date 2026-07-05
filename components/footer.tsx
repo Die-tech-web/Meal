@@ -35,7 +35,7 @@ export function Footer() {
             <Link href="#accueil">
               <Image
                 src="/images/new-logo.png"
-                alt="MEAL.sn"
+                alt="Cabinet MEAL"
                 width={154}
                 height={40}
                 className="h-10 w-auto"
@@ -47,18 +47,18 @@ export function Footer() {
             </p>
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href="mailto:contact@meal.sn"
+                href="mailto:cabinet.meal@gmail.com"
                 className="flex items-center gap-2 text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
               >
                 <Mail className="h-4 w-4" />
-                contact@meal.sn
+                cabinet.meal@gmail.com
               </a>
               <a
-                href="tel:+221330000000"
+                href="tel:+221778409832"
                 className="flex items-center gap-2 text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
               >
                 <Phone className="h-4 w-4" />
-                +221 33 XXX XX XX
+                +221 77 840 98 32
               </a>
               <span className="flex items-center gap-2 text-sm text-secondary-foreground/60">
                 <MapPin className="h-4 w-4" />

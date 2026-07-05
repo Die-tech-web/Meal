@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* MEAL.sn Professional Teal & Dark Theme */
+  /* Cabinet MEAL Professional Teal & Dark Theme */
   --background: oklch(0.985 0.002 210);
   --foreground: oklch(0.15 0.01 220);
   --card: oklch(1 0 0);

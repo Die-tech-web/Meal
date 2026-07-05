@@ -14,7 +14,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'MEAL.sn | Monitoring, Evaluation, Accountability & Learning',
+  title: 'Cabinet MEAL | Monitoring, Evaluation, Accountability & Learning',
   description:
     'Plateforme digitale professionnelle de services MEAL : consultance, suivi-evaluation, tableaux de bord interactifs et ressources methodologiques pour le developpement en Afrique.',
   keywords: [
