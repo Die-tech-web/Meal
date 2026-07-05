@@ -44,7 +44,9 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
-  const linkClass = `rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-primary/10 hover:text-primary text-foreground`
+  const linkClass = `rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-primary/10 hover:text-primary ${
+    isScrolled ? "text-foreground" : "text-white"
+  }`
 
   return (
     <header

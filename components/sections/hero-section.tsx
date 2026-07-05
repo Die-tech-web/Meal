@@ -41,10 +41,10 @@ const DIFF_ITEMS = [
 ]
 
 const STATS = [
-  { value: "50+", label: "Projets évalués" },
-  { value: "12+", label: "Pays d'intervention" },
-  { value: "200+", label: "Professionnels formés" },
-  { value: "98%", label: "Clients satisfaits" },
+  { label: "Projets évalués" },
+  { label: "Pays d'intervention" },
+  { label: "Professionnels formés" },
+  { label: "Clients satisfaits" },
 ]
 
 export function HeroSection() {
@@ -111,8 +111,7 @@ export function HeroSection() {
             <div className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-4 sm:grid-cols-4">
               {STATS.map((stat) => (
                 <div key={stat.label} className="rounded-xl border border-secondary-foreground/10 bg-secondary-foreground/5 backdrop-blur-sm px-4 py-3 text-center">
-                  <p className="text-2xl font-bold text-primary font-[var(--font-heading)]">{stat.value}</p>
-                  <p className="mt-0.5 text-xs text-secondary-foreground/60">{stat.label}</p>
+                  <p className="text-xs text-secondary-foreground/60">{stat.label}</p>
                 </div>
               ))}
             </div>
