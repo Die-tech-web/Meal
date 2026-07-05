@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowDown, ChevronRight, CheckCircle2, Users, Globe2, Award, TrendingUp, Lightbulb, ShieldCheck } from "lucide-react"
+import { ArrowDown, ChevronRight, CheckCircle2, Users, Globe2, TrendingUp, Lightbulb, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { AnimatedSection } from "@/components/animated-section"
 
@@ -241,17 +241,6 @@ export function HeroSection() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex items-center gap-3 rounded-xl bg-card/90 backdrop-blur-sm p-4 shadow-lg">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary shrink-0">
-                      <Award className="h-5 w-5 text-primary-foreground" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-foreground">Certification internationale</p>
-                      <p className="text-xs text-muted-foreground">Standards OCDE & USAID respectés</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </AnimatedSection>
           </div>
