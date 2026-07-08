@@ -7,24 +7,25 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { AnimatedSection } from "@/components/animated-section"
+import { siteConfig } from "@/lib/seo/site-config"
 
 const CONTACT_INFO = [
   {
     icon: Mail,
     label: "Email",
-    value: "cabinet.meal@gmail.com",
-    href: "mailto:cabinet.meal@gmail.com",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
   },
   {
     icon: Phone,
     label: "Telephone",
-    value: "+221 77 840 98 32",
-    href: "tel:+221778409832",
+    value: siteConfig.phoneDisplay,
+    href: `tel:${siteConfig.phone}`,
   },
   {
     icon: MapPin,
     label: "Adresse",
-    value: "Dakar, Senegal",
+    value: siteConfig.address.label,
     href: "#",
   },
   {

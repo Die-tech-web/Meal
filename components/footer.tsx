@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Mail, Phone, MapPin } from "lucide-react"
+import { siteConfig } from "@/lib/seo/site-config"
 
 const FOOTER_LINKS = {
   services: [
@@ -35,7 +36,7 @@ export function Footer() {
             <Link href="#accueil">
               <Image
                 src="/images/new-logo.png"
-                alt="Cabinet MEAL"
+                alt={siteConfig.name}
                 width={154}
                 height={40}
                 className="h-10 w-auto"
@@ -47,22 +48,22 @@ export function Footer() {
             </p>
             <div className="mt-6 flex flex-col gap-3">
               <a
-                href="mailto:cabinet.meal@gmail.com"
+                href={`mailto:${siteConfig.email}`}
                 className="flex items-center gap-2 text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
               >
                 <Mail className="h-4 w-4" />
-                cabinet.meal@gmail.com
+                {siteConfig.email}
               </a>
               <a
-                href="tel:+221778409832"
+                href={`tel:${siteConfig.phone}`}
                 className="flex items-center gap-2 text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
               >
                 <Phone className="h-4 w-4" />
-                +221 77 840 98 32
+                {siteConfig.phoneDisplay}
               </a>
               <span className="flex items-center gap-2 text-sm text-secondary-foreground/60">
                 <MapPin className="h-4 w-4" />
-                Dakar, Senegal
+                {siteConfig.address.label}
               </span>
             </div>
           </div>
@@ -130,12 +131,12 @@ export function Footer() {
           <p className="text-xs text-secondary-foreground/40">
             {currentYear}{" "}
             <a
-              href="https://www.cabinet-meal.com/"
+              href={siteConfig.url}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors hover:text-primary"
             >
-              https://www.cabinet-meal.com/
+              {siteConfig.url}
             </a>{" "}
             Tous droits reserves.
           </p>

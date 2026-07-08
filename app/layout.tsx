@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { createSiteMetadata } from '@/lib/seo/metadata'
 import './globals.css'
 
 const inter = Inter({
@@ -13,28 +14,7 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 })
 
-export const metadata: Metadata = {
-  title: 'Cabinet MEAL | Monitoring, Evaluation, Accountability & Learning',
-  description:
-    'Plateforme digitale professionnelle de services MEAL : consultance, suivi-evaluation, tableaux de bord interactifs et ressources methodologiques pour le developpement en Afrique.',
-  keywords: [
-    'MEAL',
-    'suivi-evaluation',
-    'monitoring',
-    'evaluation',
-    'accountability',
-    'learning',
-    'ONG',
-    'Senegal',
-    'Afrique',
-  ],
-  generator: 'v0.app',
-  icons: {
-    icon: '/images/meal-sn-icon.svg',
-    shortcut: '/images/meal-sn-icon.svg',
-    apple: '/images/meal-sn-icon.svg',
-  },
-}
+export const metadata: Metadata = createSiteMetadata()
 
 export const viewport: Viewport = {
   themeColor: '#0d9488',
