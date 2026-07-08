@@ -36,6 +36,7 @@ const MEAL_PILLARS = [
 
 export function AboutSection() {
   const [activeTab, setActiveTab] = useState<Tab>("Qui sommes-nous")
+  const [selectedCard, setSelectedCard] = useState<string | null>(null)
 
   return (
     <section id="apropos" className="py-20 bg-background">
@@ -94,12 +95,26 @@ export function AboutSection() {
                   Notre approche intègre les meilleures pratiques internationales adaptées au
                   contexte africain, avec une équipe pluridisciplinaire de consultants chevronnés.
                 </p>
-                <div className="grid grid-cols-2 gap-4 pt-2">
-                  {[["1+", "Projets évalués"], ["1+", "Pays couverts"], ["1+", "Professionnels formés"], ["1+", "Années d'expérience"]].map(([val, lbl]) => (
-                    <div key={lbl} className="rounded-xl border border-border bg-muted/30 p-4 text-center">
-                      <p className="text-2xl font-bold text-primary">{val}</p>
-                      <p className="mt-1 text-xs text-muted-foreground">{lbl}</p>
-                    </div>
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  {["Projets évalués", "Pays couverts", "Professionnels formés", "Années d'expérience"].map((lbl) => (
+                    <button
+                      key={lbl}
+                      type="button"
+                      onClick={() => setSelectedCard(lbl)}
+                      className={cn(
+                        "rounded-xl border px-5 py-5 text-center shadow-sm backdrop-blur-xl transition-all duration-200",
+                        selectedCard === lbl
+                          ? "border-primary bg-primary text-primary-foreground shadow-md"
+                          : "border-white/60 bg-white/35 hover:bg-white/50 dark:border-white/10 dark:bg-white/5"
+                      )}
+                    >
+                      <p className={cn(
+                        "mt-1 text-xs",
+                        selectedCard === lbl ? "font-medium text-primary-foreground" : "text-muted-foreground"
+                      )}>
+                        {lbl}
+                      </p>
+                    </button>
                   ))}
                 </div>
               </div>
