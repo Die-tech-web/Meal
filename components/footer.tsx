@@ -1,7 +1,20 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react"
 import { siteConfig } from "@/lib/seo/site-config"
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-2-2.76V9.4a6.33 6.33 0 1 0 5.43 6.27V8.73a8.16 8.16 0 0 0 4.77 1.52V6.81c-.33 0-.66-.04-.98-.12Z" />
+    </svg>
+  )
+}
 
 const FOOTER_LINKS = {
   services: [
@@ -17,12 +30,30 @@ const FOOTER_LINKS = {
     { label: "Guides pratiques", href: "#ressources" },
     { label: "Methodologie", href: "#methodologie" },
   ],
-  about: [
-    { label: "A propos", href: "#apropos" },
-    { label: "Notre equipe", href: "#apropos" },
-    { label: "Contact", href: "#contact" },
-  ],
 } as const
+
+const SOCIAL_LINKS = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/profile.php?id=61590527114185",
+    icon: Facebook,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/mansour-niang-88353923b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    icon: Linkedin,
+  },
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@formateur_meal?_r=1&_t=ZS-97VK8qJdyVe",
+    icon: TikTokIcon,
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@CABINETMEAL",
+    icon: Youtube,
+  },
+] as const
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -106,22 +137,38 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* About */}
+          {/* Social networks */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-secondary-foreground font-[var(--font-heading)]">
-              A propos
+              Réseaux sociaux
             </h4>
             <ul className="mt-4 flex flex-col gap-3">
-              {FOOTER_LINKS.about.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {SOCIAL_LINKS.map((link) => {
+                const Icon = link.icon
+
+                return (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
+                    >
+                      <Icon className="h-4 w-4 shrink-0" />
+                      {link.label}
+                    </a>
+                  </li>
+                )
+              })}
+              <li>
+                <Link
+                  href="#contact"
+                  className="flex items-center gap-2 text-sm text-secondary-foreground/60 transition-colors hover:text-primary"
+                >
+                  <Mail className="h-4 w-4 shrink-0" />
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
