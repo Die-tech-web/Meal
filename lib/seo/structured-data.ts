@@ -25,6 +25,7 @@ export function createHomePageStructuredData() {
         description: siteConfig.description,
         email: siteConfig.email,
         telephone: siteConfig.phone,
+        sameAs: Object.values(siteConfig.socialLinks),
         address: {
           "@type": "PostalAddress",
           addressLocality: siteConfig.address.locality,
@@ -49,6 +50,24 @@ export function createHomePageStructuredData() {
           "Suivi-évaluation de projets",
           "Collecte et analyse de données",
         ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Services du Cabinet MEAL",
+          itemListElement: [
+            "Suivi et évaluation de projets",
+            "Conception de systèmes MEAL",
+            "Collecte et analyse de données",
+            "Tableaux de bord",
+            "Formation et renforcement des capacités",
+          ].map((name) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name,
+              areaServed: "Sénégal et Afrique de l'Ouest",
+            },
+          })),
+        },
       },
       {
         "@type": "WebSite",

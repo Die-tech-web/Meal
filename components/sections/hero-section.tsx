@@ -94,8 +94,11 @@ export function HeroSection() {
 
           <AnimatedSection animation="fade-up" delay={100}>
             <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight tracking-tight text-secondary-foreground font-[var(--font-heading)] md:text-6xl lg:text-7xl text-balance">
-              Monitoring, Evaluation,{" "}
-              <span className="text-primary">Accountability</span> & Learning
+              Cabinet MEAL Sénégal
+              <span className="mt-3 block text-[0.68em] leading-tight">
+                Monitoring, Evaluation,{" "}
+                <span className="text-primary">Accountability</span> & Learning
+              </span>
             </h1>
           </AnimatedSection>
 

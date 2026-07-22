@@ -13,9 +13,9 @@ function getSiteUrl() {
 export const siteConfig = {
   name: "Cabinet MEAL",
   shortName: "MEAL",
-  title: "Cabinet MEAL Sénégal | Suivi-évaluation et conseil",
+  title: "Cabinet MEAL Sénégal | Suivi-évaluation, formation et conseil",
   description:
-    "Cabinet MEAL accompagne les ONG et organisations en Afrique : suivi-évaluation, consultance, formation, tableaux de bord et ressources méthodologiques.",
+    "Cabinet MEAL est un cabinet de suivi-évaluation basé à Dakar, au Sénégal. Nous accompagnons les ONG et organisations en Afrique par le conseil, la formation, la collecte de données et les tableaux de bord.",
   url: getSiteUrl(),
   locale: "fr_SN",
   language: "fr",
@@ -30,8 +30,18 @@ export const siteConfig = {
   logo: "/images/meal-sn-logo.png",
   icon: "/images/meal-sn-icon.svg",
   socialImage: "/images/hero-bg.jpg",
+  socialLinks: {
+    facebook: "https://www.facebook.com/profile.php?id=61590527114185",
+    linkedin:
+      "https://www.linkedin.com/in/mansour-niang-88353923b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    tiktok: "https://www.tiktok.com/@formateur_meal?_r=1&_t=ZS-97VK8qJdyVe",
+    youtube: "https://www.youtube.com/@CABINETMEAL",
+  },
   keywords: [
     "cabinet MEAL Sénégal",
+    "Cabinet MEAL Dakar",
+    "cabinet de suivi-évaluation Sénégal",
+    "cabinet suivi évaluation Dakar",
     "suivi-évaluation Sénégal",
     "Monitoring Evaluation Accountability Learning",
     "consultant MEAL Afrique",

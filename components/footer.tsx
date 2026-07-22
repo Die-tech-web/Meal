@@ -35,22 +35,22 @@ const FOOTER_LINKS = {
 const SOCIAL_LINKS = [
   {
     label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61590527114185",
+    href: siteConfig.socialLinks.facebook,
     icon: Facebook,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/mansour-niang-88353923b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    href: siteConfig.socialLinks.linkedin,
     icon: Linkedin,
   },
   {
     label: "TikTok",
-    href: "https://www.tiktok.com/@formateur_meal?_r=1&_t=ZS-97VK8qJdyVe",
+    href: siteConfig.socialLinks.tiktok,
     icon: TikTokIcon,
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/@CABINETMEAL",
+    href: siteConfig.socialLinks.youtube,
     icon: Youtube,
   },
 ] as const
